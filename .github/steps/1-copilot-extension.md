@@ -1,4 +1,18 @@
-<!--
+<!--def list_repo_contents(owner, repo):
+    url = f"https://api.github.com/repos/{owner}/{repo}/contents/"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        contents = response.json()
+        for item in contents:
+            print(f"Name: {item['name']}, Type: {item['type']}")
+    else:
+        print(f"Failed to retrieve contents. Status code: {response.status_code}")
+
+# Replace 'TheImpossible-create' with the owner of the repository and 'fisch' with the name of the repository
+owner = "TheImpossible-create"
+repo = "fisch"
+list_repo_contents(owner, repo)
   <<< Author notes: Step 1 >>>
   Choose 3-5 steps for your course.
   The first step is always the hardest, so pick something easy!
